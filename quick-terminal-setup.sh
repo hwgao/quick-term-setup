@@ -24,6 +24,7 @@ set -g mouse on
 set -g base-index 1
 set -g status-keys vi
 set -g mode-keys vi
+set -g renumber-windows on
 
 # Smart pane switching with awareness of Vim splits.
 # # See: https://github.com/christoomey/vim-tmux-navigator
