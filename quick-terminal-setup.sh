@@ -59,9 +59,10 @@ setw -g status-style "fg=white bg=color234"
 EOF
 
 # Configure nvim
-sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
-       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
+mkdir -p "${HOME}"/.config/nvim/
 cat <<EOF > "${HOME}"/.config/nvim/init.vim
 if exists('g:vscode')
   " vscode extension
