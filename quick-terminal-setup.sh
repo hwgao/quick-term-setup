@@ -64,6 +64,7 @@ else
   let &packpath = &runtimepath
   " Specify a directory for plugins
   call plug#begin('~/.vim/bundle')
+  Plug 'vim-airline/vim-airline'
   Plug 'christoomey/vim-tmux-navigator'
   call plug#end()
 endif
