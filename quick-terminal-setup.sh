@@ -33,6 +33,14 @@ bind -n C-j if-shell "\$is_vim" "send-keys C-j"  "select-pane -D"
 bind -n C-k if-shell "\$is_vim" "send-keys C-k"  "select-pane -U"
 bind -n C-l if-shell "\$is_vim" "send-keys C-l"  "select-pane -R"
 
+# create new window with the current directory
+bind '"' split-window -c "#{pane_current_path}"
+bind % split-window -h -c "#{pane_current_path}"
+bind c new-window -c "#{pane_current_path}"
+
+# Clear screen
+bind C-l send-keys 'C-l'
+
 # Theme
 setw -g window-status-current-style "fg=blue bg=white bold"
 setw -g status-style "fg=white bg=blue"
