@@ -54,8 +54,7 @@ bind c new-window -c "#{pane_current_path}"
 bind C-l send-keys 'C-l'
 
 # Theme
-setw -g window-status-current-style "fg=white bg=color32 bold"
-setw -g status-style "fg=white bg=color234"
+setw -g window-status-current-style "fg=white bg=black bold"
 EOF
 
 # Configure nvim
