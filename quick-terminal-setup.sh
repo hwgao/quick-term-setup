@@ -9,9 +9,12 @@ if [ "$(uname)" == "Darwin" ]; then
   check_cmd brew || /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
   check_cmd code || brew install nvim tmux fzf ripgrep fd mc tig tree cmake git go node visual-studio-code
 else
-  apt install tmux fzf ripgrep fd-find mc tig tree cmake git curl build-essential
-  snap install nvim go node
-  check_cmd xinit || snap install code
+  check_cmd tmux || sudo apt update
+  check_cmd tmux || sudo apt install -y tmux fzf ripgrep fd-find mc tig tree cmake git curl build-essential
+  sudo snap install nvim --candidate --classic
+  sudo snap install go --classic
+  sudo snap install node --channel 14/stable --classic
+  check_cmd xinit && sudo snap install code --classic
 fi
 
 if [ "$SHELL" == "/bin/zsh" ]; then
