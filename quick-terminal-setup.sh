@@ -66,3 +66,17 @@ set smartcase                              " ... but not it begins with upper ca
 set clipboard=unnamedplus
 nnoremap <Space><Space> :nohls<CR>
 EOF
+
+cat <<EOF > "${HOME}"/.tigrc
+# Push local changes to origin
+bind status P !git push origin
+bind main P !git push origin
+
+# Delete file under cursor
+bind status D !?rm -rf "%(file)"
+
+# Checkout the original version
+bind status O !?git checkout -- "%(file)"
+
+color graph-commit green default
+EOF
