@@ -79,6 +79,8 @@ else
   Plug 'vim-airline/vim-airline'
   Plug 'christoomey/vim-tmux-navigator'
   call plug#end()
+
+  colorscheme desert
 endif
 
 set ignorecase                             " Search case insensitive...
